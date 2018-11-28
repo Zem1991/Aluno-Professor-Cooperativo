@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APC - Forms", "APC - Forms\APC - Forms.csproj", "{F923EB9B-7944-4B0D-BCD2-5822093E6627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio.Entities", "Repositorio.Entities\Repositorio.Entities.csproj", "{9E3B3C7B-5C58-44A2-AC1C-E7BE54B69CE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorios.DAL", "Repositorios.DAL\Repositorios.DAL.csproj", "{D718B2E0-5935-48DF-96D6-42F93E234DA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F923EB9B-7944-4B0D-BCD2-5822093E6627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F923EB9B-7944-4B0D-BCD2-5822093E6627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F923EB9B-7944-4B0D-BCD2-5822093E6627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F923EB9B-7944-4B0D-BCD2-5822093E6627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E3B3C7B-5C58-44A2-AC1C-E7BE54B69CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E3B3C7B-5C58-44A2-AC1C-E7BE54B69CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E3B3C7B-5C58-44A2-AC1C-E7BE54B69CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E3B3C7B-5C58-44A2-AC1C-E7BE54B69CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D718B2E0-5935-48DF-96D6-42F93E234DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D718B2E0-5935-48DF-96D6-42F93E234DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D718B2E0-5935-48DF-96D6-42F93E234DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D718B2E0-5935-48DF-96D6-42F93E234DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70681D10-3F8F-4F62-8753-5B9DC57B14B0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://klausmd.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = APC\u0020-\u0020Forms\\APC\u0020-\u0020Forms.csproj
+		SccProjectName1 = APC\u0020-\u0020Forms
+		SccLocalPath1 = APC\u0020-\u0020Forms
+		SccProjectUniqueName2 = Repositorio.Entities\\Repositorio.Entities.csproj
+		SccProjectName2 = Repositorio.Entities
+		SccLocalPath2 = Repositorio.Entities
+		SccProjectUniqueName3 = Repositorios.DAL\\Repositorios.DAL.csproj
+		SccProjectName3 = Repositorios.DAL
+		SccLocalPath3 = Repositorios.DAL
+	EndGlobalSection
+EndGlobal

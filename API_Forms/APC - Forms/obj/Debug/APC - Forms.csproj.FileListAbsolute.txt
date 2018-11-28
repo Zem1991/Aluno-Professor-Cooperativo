@@ -1,0 +1,43 @@
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\obj\Debug\APC - Forms.csprojResolveAssemblyReference.cache
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\obj\Debug\APC___Forms.MainLogin.resources
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\obj\Debug\APC___Forms.PerfilUsuario.resources
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\obj\Debug\APC___Forms.Properties.Resources.resources
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\obj\Debug\APC - Forms.csproj.GenerateResource.Cache
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\obj\Debug\APC - Forms.csproj.CoreCompileInputs.cache
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\APC - Forms.exe.config
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\APC - Forms.exe
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\APC - Forms.pdb
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\Repositorio.Entities.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\Repositorios.DAL.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\EntityFramework.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\System.Web.Mvc.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\System.Web.WebPages.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\Repositorio.Entities.pdb
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\Repositorio.Entities.dll.config
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\Repositorios.DAL.pdb
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\Repositorios.DAL.dll.config
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\bin\Debug\EntityFramework.xml
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\obj\Debug\APC - Forms.exe
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\APC - Forms\obj\Debug\APC - Forms.pdb
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\APC - Forms.exe.config
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\APC - Forms.exe
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\APC - Forms.pdb
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\Newtonsoft.Json.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\Repositorio.Entities.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\Repositorios.DAL.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\EntityFramework.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\System.Web.Mvc.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\System.Web.WebPages.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\Repositorio.Entities.pdb
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\Repositorio.Entities.dll.config
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\Repositorios.DAL.pdb
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\Repositorios.DAL.dll.config
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\bin\Debug\EntityFramework.xml
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\obj\Debug\APC - Forms.csprojResolveAssemblyReference.cache
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\obj\Debug\APC___Forms.MainLogin.resources
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\obj\Debug\APC___Forms.PerfilUsuario.resources
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\obj\Debug\APC___Forms.Properties.Resources.resources
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\obj\Debug\APC - Forms.csproj.GenerateResource.Cache
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\obj\Debug\APC - Forms.exe
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\APC - Forms\obj\Debug\APC - Forms.pdb

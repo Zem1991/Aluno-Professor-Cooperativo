@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="APCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Aluno' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Aluno">
+          <Property Name="Aluno_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Avaliacao" Type="nvarchar" MaxLength="255" />
+          <Property Name="Potencial" Type="nvarchar" MaxLength="255" />
+          <Property Name="Usuario" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Aluno_Interesse' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Aluno_Interesse">
+          <Property Name="Aluno_Interesse_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aluno" Type="nvarchar" MaxLength="255" />
+          <Property Name="Interesse" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Aluno_Turma' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Aluno_Turma">
+          <Property Name="Aluno_Turma" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aluno" Type="nvarchar" MaxLength="255" />
+          <Property Name="Turma" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Interesse' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Interesse">
+          <Property Name="Interesse_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Topico" Type="nvarchar" MaxLength="255" />
+          <Property Name="Disciplina" Type="nvarchar" MaxLength="255" />
+          <Property Name="Profundidade" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Login_Usuario' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Login_Usuario">
+          <Property Name="LOID" Type="nvarchar" MaxLength="255" />
+          <Property Name="LOLogin" Type="nvarchar" MaxLength="255" />
+          <Property Name="LOSenha" Type="nvarchar" MaxLength="255" />
+          <Property Name="LOTipoUsuario" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Professor' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Professor">
+          <Property Name="Professor_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Experiencia" Type="nvarchar" MaxLength="255" />
+          <Property Name="Avaliacao" Type="nvarchar" MaxLength="255" />
+          <Property Name="Potencial" Type="nvarchar" MaxLength="255" />
+          <Property Name="Usuario" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Professor_Interesse' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Professor_Interesse">
+          <Property Name="Prof_Interesse_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Professor" Type="nvarchar" MaxLength="255" />
+          <Property Name="Interesse" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Professor_Turma' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Professor_Turma">
+          <Property Name="Professor_Turma_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Professor" Type="nvarchar" MaxLength="255" />
+          <Property Name="Turma" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.TipoUsuario' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TipoUsuario">
+          <Property Name="TUID" Type="nvarchar" MaxLength="255" />
+          <Property Name="TipoUsuario" Type="nvarchar" MaxLength="255" />
+          <Property Name="DescricaoTipo" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Turma' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Turma">
+          <Property Name="Turma_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="255" />
+          <Property Name="Interesse" Type="nvarchar" MaxLength="255" />
+          <Property Name="Data" Type="nvarchar" MaxLength="255" />
+          <Property Name="Duracao" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'APC.dbo.Usuario' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Usuario">
+          <Property Name="Usuario_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="255" />
+          <Property Name="Foto" Type="nvarchar" MaxLength="255" />
+          <Property Name="CPF" Type="nvarchar" MaxLength="255" />
+          <Property Name="Idade" Type="nvarchar" MaxLength="255" />
+          <Property Name="Login_Usuario" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <EntityContainer Name="APCModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="APCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true" />
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="APCModelStoreContainer" CdmEntityContainer="Entities" />
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

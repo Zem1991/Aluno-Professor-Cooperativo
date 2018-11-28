@@ -1,0 +1,43 @@
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\obj\Debug\Repositorio.Entities.csprojResolveAssemblyReference.cache
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\obj\Debug\Repositorio.Entities.csproj.CoreCompileInputs.cache
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\bin\Debug\Repositorio.Entities.dll.config
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\bin\Debug\Repositorio.Entities.dll
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\bin\Debug\Repositorio.Entities.pdb
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\bin\Debug\EntityFramework.dll
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\bin\Debug\EntityFramework.xml
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\obj\Debug\Repositorio.Entities.dll
+C:\Users\DienerComp\Source\repos\API_APC\Repositorio.Entities\obj\Debug\Repositorio.Entities.pdb
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.dll.config
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.dll
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.pdb
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\bin\Debug\EntityFramework.dll
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\bin\Debug\EntityFramework.xml
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.csprojResolveAssemblyReference.cache
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.csproj.CoreCompileInputs.cache
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.dll
+C:\Users\DienerComp\Source\repos\APC - Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.pdb
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.dll.config
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.pdb
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\bin\Debug\EntityFramework.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\bin\Debug\EntityFramework.xml
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.csprojResolveAssemblyReference.cache
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.csproj.CoreCompileInputs.cache
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.dll
+C:\Users\DienerComp\Desktop\trab klaus\gogogo\AAAHHHH\API_Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.pdb
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.dll.config
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\bin\Debug\Repositorio.Entities.pdb
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\bin\Debug\EntityFramework.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\bin\Debug\EntityFramework.xml
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.csprojResolveAssemblyReference.cache
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.dll
+D:\Dropbox\Trabalho Cooperativo Apoiado Por Computador - Leonelo\TRAMPO FINAL\API_Forms\API_Forms\Repositorio.Entities\obj\Debug\Repositorio.Entities.pdb

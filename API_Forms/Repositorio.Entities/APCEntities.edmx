@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="APCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Aluno">
+          <Key>
+            <PropertyRef Name="Aluno_ID" />
+          </Key>
+          <Property Name="Aluno_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Avaliacao" Type="int" />
+          <Property Name="Potencial" Type="int" />
+          <Property Name="Usuario" Type="int" />
+        </EntityType>
+        <EntityType Name="Aluno_Interesse">
+          <Key>
+            <PropertyRef Name="Aluno_Interesse_ID" />
+          </Key>
+          <Property Name="Aluno_Interesse_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aluno" Type="int" />
+          <Property Name="Interesse" Type="int" />
+        </EntityType>
+        <EntityType Name="Aluno_Turma">
+          <Key>
+            <PropertyRef Name="Aluno_Turma" />
+          </Key>
+          <Property Name="Aluno_Turma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aluno" Type="int" />
+          <Property Name="Turma" Type="int" />
+        </EntityType>
+        <EntityType Name="Interesse">
+          <Key>
+            <PropertyRef Name="Interesse_ID" />
+          </Key>
+          <Property Name="Interesse_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Topico" Type="varchar" MaxLength="250" />
+          <Property Name="Disciplina" Type="varchar" MaxLength="250" />
+          <Property Name="Profundidade" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Login_Usuario">
+          <Key>
+            <PropertyRef Name="LOID" />
+          </Key>
+          <Property Name="LOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LOLogin" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="LOSenha" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="LOTipoUsuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Professor">
+          <Key>
+            <PropertyRef Name="Professor_ID" />
+          </Key>
+          <Property Name="Professor_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Experiencia" Type="int" />
+          <Property Name="Avaliacao" Type="int" />
+          <Property Name="Potencial" Type="int" />
+          <Property Name="Usuario" Type="int" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Professor_Interesse">
+          <Key>
+            <PropertyRef Name="Prof_Interesse_ID" />
+          </Key>
+          <Property Name="Prof_Interesse_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Professor" Type="int" />
+          <Property Name="Interesse" Type="int" />
+        </EntityType>
+        <EntityType Name="Professor_Turma">
+          <Key>
+            <PropertyRef Name="Professor_Turma_ID" />
+          </Key>
+          <Property Name="Professor_Turma_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Professor" Type="int" />
+          <Property Name="Turma" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TipoUsuario">
+          <Key>
+            <PropertyRef Name="TUID" />
+          </Key>
+          <Property Name="TUID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoUsuario" Type="int" Nullable="false" />
+          <Property Name="DescricaoTipo" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Turma">
+          <Key>
+            <PropertyRef Name="Turma_ID" />
+          </Key>
+          <Property Name="Turma_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar(max)" />
+          <Property Name="Interesse" Type="int" />
+          <Property Name="Data" Type="datetime" />
+          <Property Name="Duracao" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Usuario_ID" />
+          </Key>
+          <Property Name="Usuario_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar(max)" />
+          <Property Name="Foto" Type="varchar(max)" />
+          <Property Name="CPF" Type="varchar" MaxLength="15" />
+          <Property Name="Idade" Type="int" />
+          <Property Name="Login_Usuario" Type="int" />
+        </EntityType>
+        <Association Name="FK__Aluno__Usuario__46E78A0C">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Aluno" Type="Self.Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Usuario_ID" />
+            </Principal>
+            <Dependent Role="Aluno">
+              <PropertyRef Name="Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Aluno_Int__Aluno__47DBAE45">
+          <End Role="Aluno" Type="Self.Aluno" Multiplicity="0..1" />
+          <End Role="Aluno_Interesse" Type="Self.Aluno_Interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aluno">
+              <PropertyRef Name="Aluno_ID" />
+            </Principal>
+            <Dependent Role="Aluno_Interesse">
+              <PropertyRef Name="Aluno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Aluno_Int__Inter__48CFD27E">
+          <End Role="Interesse" Type="Self.Interesse" Multiplicity="0..1" />
+          <End Role="Aluno_Interesse" Type="Self.Aluno_Interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interesse">
+              <PropertyRef Name="Interesse_ID" />
+            </Principal>
+            <Dependent Role="Aluno_Interesse">
+              <PropertyRef Name="Interesse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Aluno_Tur__Aluno__49C3F6B7">
+          <End Role="Aluno" Type="Self.Aluno" Multiplicity="0..1" />
+          <End Role="Aluno_Turma" Type="Self.Aluno_Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aluno">
+              <PropertyRef Name="Aluno_ID" />
+            </Principal>
+            <Dependent Role="Aluno_Turma">
+              <PropertyRef Name="Aluno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Aluno_Tur__Turma__4AB81AF0">
+          <End Role="Turma" Type="Self.Turma" Multiplicity="0..1" />
+          <End Role="Aluno_Turma" Type="Self.Aluno_Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="Turma_ID" />
+            </Principal>
+            <Dependent Role="Aluno_Turma">
+              <PropertyRef Name="Turma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Inter__4D94879B">
+          <End Role="Interesse" Type="Self.Interesse" Multiplicity="0..1" />
+          <End Role="Professor_Interesse" Type="Self.Professor_Interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interesse">
+              <PropertyRef Name="Interesse_ID" />
+            </Principal>
+            <Dependent Role="Professor_Interesse">
+              <PropertyRef Name="Interesse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Profe__4CA06362">
+          <End Role="Professor" Type="Self.Professor" Multiplicity="0..1" />
+          <End Role="Professor_Interesse" Type="Self.Professor_Interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Professor">
+              <PropertyRef Name="Professor_ID" />
+            </Principal>
+            <Dependent Role="Professor_Interesse">
+              <PropertyRef Name="Professor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Profe__4E88ABD4">
+          <End Role="Professor" Type="Self.Professor" Multiplicity="0..1" />
+          <End Role="Professor_Turma" Type="Self.Professor_Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Professor">
+              <PropertyRef Name="Professor_ID" />
+            </Principal>
+            <Dependent Role="Professor_Turma">
+              <PropertyRef Name="Professor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Turma__4F7CD00D">
+          <End Role="Turma" Type="Self.Turma" Multiplicity="0..1" />
+          <End Role="Professor_Turma" Type="Self.Professor_Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="Turma_ID" />
+            </Principal>
+            <Dependent Role="Professor_Turma">
+              <PropertyRef Name="Turma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Usuar__4BAC3F29">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Professor" Type="Self.Professor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Usuario_ID" />
+            </Principal>
+            <Dependent Role="Professor">
+              <PropertyRef Name="Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Turma_Interesse">
+          <End Role="Interesse" Type="Self.Interesse" Multiplicity="0..1" />
+          <End Role="Turma" Type="Self.Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interesse">
+              <PropertyRef Name="Interesse_ID" />
+            </Principal>
+            <Dependent Role="Turma">
+              <PropertyRef Name="Interesse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Login_Usuario">
+          <End Role="Login_Usuario" Type="Self.Login_Usuario" Multiplicity="0..1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login_Usuario">
+              <PropertyRef Name="LOID" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Login_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="APCModelStoreContainer">
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Aluno" EntityType="Self.Aluno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Aluno_Interesse" EntityType="Self.Aluno_Interesse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Aluno_Turma" EntityType="Self.Aluno_Turma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Interesse" EntityType="Self.Interesse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login_Usuario" EntityType="Self.Login_Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Professor" EntityType="Self.Professor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Professor_Interesse" EntityType="Self.Professor_Interesse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Professor_Turma" EntityType="Self.Professor_Turma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turma" EntityType="Self.Turma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Aluno__Usuario__46E78A0C" Association="Self.FK__Aluno__Usuario__46E78A0C">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Aluno" EntitySet="Aluno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Aluno_Int__Aluno__47DBAE45" Association="Self.FK__Aluno_Int__Aluno__47DBAE45">
+            <End Role="Aluno" EntitySet="Aluno" />
+            <End Role="Aluno_Interesse" EntitySet="Aluno_Interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Aluno_Int__Inter__48CFD27E" Association="Self.FK__Aluno_Int__Inter__48CFD27E">
+            <End Role="Interesse" EntitySet="Interesse" />
+            <End Role="Aluno_Interesse" EntitySet="Aluno_Interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Aluno_Tur__Aluno__49C3F6B7" Association="Self.FK__Aluno_Tur__Aluno__49C3F6B7">
+            <End Role="Aluno" EntitySet="Aluno" />
+            <End Role="Aluno_Turma" EntitySet="Aluno_Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Aluno_Tur__Turma__4AB81AF0" Association="Self.FK__Aluno_Tur__Turma__4AB81AF0">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Aluno_Turma" EntitySet="Aluno_Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Inter__4D94879B" Association="Self.FK__Professor__Inter__4D94879B">
+            <End Role="Interesse" EntitySet="Interesse" />
+            <End Role="Professor_Interesse" EntitySet="Professor_Interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Profe__4CA06362" Association="Self.FK__Professor__Profe__4CA06362">
+            <End Role="Professor" EntitySet="Professor" />
+            <End Role="Professor_Interesse" EntitySet="Professor_Interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Profe__4E88ABD4" Association="Self.FK__Professor__Profe__4E88ABD4">
+            <End Role="Professor" EntitySet="Professor" />
+            <End Role="Professor_Turma" EntitySet="Professor_Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Turma__4F7CD00D" Association="Self.FK__Professor__Turma__4F7CD00D">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Professor_Turma" EntitySet="Professor_Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Usuar__4BAC3F29" Association="Self.FK__Professor__Usuar__4BAC3F29">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Professor" EntitySet="Professor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Turma_Interesse" Association="Self.FK_Turma_Interesse">
+            <End Role="Interesse" EntitySet="Interesse" />
+            <End Role="Turma" EntitySet="Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Login_Usuario" Association="Self.FK_Usuario_Login_Usuario">
+            <End Role="Login_Usuario" EntitySet="Login_Usuario" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="APCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="APCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__RefactorLog" EntityType="APCModel.C__RefactorLog" />
+          <EntitySet Name="Aluno" EntityType="APCModel.Aluno" />
+          <EntitySet Name="Aluno_Interesse" EntityType="APCModel.Aluno_Interesse" />
+          <EntitySet Name="Aluno_Turma" EntityType="APCModel.Aluno_Turma" />
+          <EntitySet Name="Interesse" EntityType="APCModel.Interesse" />
+          <EntitySet Name="Login_Usuario" EntityType="APCModel.Login_Usuario" />
+          <EntitySet Name="Professor" EntityType="APCModel.Professor" />
+          <EntitySet Name="Professor_Interesse" EntityType="APCModel.Professor_Interesse" />
+          <EntitySet Name="Professor_Turma" EntityType="APCModel.Professor_Turma" />
+          <EntitySet Name="sysdiagrams" EntityType="APCModel.sysdiagrams" />
+          <EntitySet Name="TipoUsuario" EntityType="APCModel.TipoUsuario" />
+          <EntitySet Name="Turma" EntityType="APCModel.Turma" />
+          <EntitySet Name="Usuario" EntityType="APCModel.Usuario" />
+          <AssociationSet Name="FK__Aluno__Usuario__46E78A0C" Association="APCModel.FK__Aluno__Usuario__46E78A0C">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Aluno" EntitySet="Aluno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Aluno_Int__Aluno__47DBAE45" Association="APCModel.FK__Aluno_Int__Aluno__47DBAE45">
+            <End Role="Aluno" EntitySet="Aluno" />
+            <End Role="Aluno_Interesse" EntitySet="Aluno_Interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Aluno_Tur__Aluno__49C3F6B7" Association="APCModel.FK__Aluno_Tur__Aluno__49C3F6B7">
+            <End Role="Aluno" EntitySet="Aluno" />
+            <End Role="Aluno_Turma" EntitySet="Aluno_Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Aluno_Int__Inter__48CFD27E" Association="APCModel.FK__Aluno_Int__Inter__48CFD27E">
+            <End Role="Interesse" EntitySet="Interesse" />
+            <End Role="Aluno_Interesse" EntitySet="Aluno_Interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Aluno_Tur__Turma__4AB81AF0" Association="APCModel.FK__Aluno_Tur__Turma__4AB81AF0">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Aluno_Turma" EntitySet="Aluno_Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Inter__4D94879B" Association="APCModel.FK__Professor__Inter__4D94879B">
+            <End Role="Interesse" EntitySet="Interesse" />
+            <End Role="Professor_Interesse" EntitySet="Professor_Interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Turma_Interesse" Association="APCModel.FK_Turma_Interesse">
+            <End Role="Interesse" EntitySet="Interesse" />
+            <End Role="Turma" EntitySet="Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Login_Usuario" Association="APCModel.FK_Usuario_Login_Usuario">
+            <End Role="Login_Usuario" EntitySet="Login_Usuario" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Profe__4CA06362" Association="APCModel.FK__Professor__Profe__4CA06362">
+            <End Role="Professor" EntitySet="Professor" />
+            <End Role="Professor_Interesse" EntitySet="Professor_Interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Profe__4E88ABD4" Association="APCModel.FK__Professor__Profe__4E88ABD4">
+            <End Role="Professor" EntitySet="Professor" />
+            <End Role="Professor_Turma" EntitySet="Professor_Turma" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Usuar__4BAC3F29" Association="APCModel.FK__Professor__Usuar__4BAC3F29">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Professor" EntitySet="Professor" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Professor__Turma__4F7CD00D" Association="APCModel.FK__Professor__Turma__4F7CD00D">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Professor_Turma" EntitySet="Professor_Turma" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="C__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Aluno">
+          <Key>
+            <PropertyRef Name="Aluno_ID" />
+          </Key>
+          <Property Name="Aluno_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Avaliacao" Type="Int32" />
+          <Property Name="Potencial" Type="Int32" />
+          <Property Name="Usuario" Type="Int32" />
+          <NavigationProperty Name="Usuario1" Relationship="APCModel.FK__Aluno__Usuario__46E78A0C" FromRole="Aluno" ToRole="Usuario" />
+          <NavigationProperty Name="Aluno_Interesse" Relationship="APCModel.FK__Aluno_Int__Aluno__47DBAE45" FromRole="Aluno" ToRole="Aluno_Interesse" />
+          <NavigationProperty Name="Aluno_Turma" Relationship="APCModel.FK__Aluno_Tur__Aluno__49C3F6B7" FromRole="Aluno" ToRole="Aluno_Turma" />
+        </EntityType>
+        <EntityType Name="Aluno_Interesse">
+          <Key>
+            <PropertyRef Name="Aluno_Interesse_ID" />
+          </Key>
+          <Property Name="Aluno_Interesse_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Aluno" Type="Int32" />
+          <Property Name="Interesse" Type="Int32" />
+          <NavigationProperty Name="Aluno1" Relationship="APCModel.FK__Aluno_Int__Aluno__47DBAE45" FromRole="Aluno_Interesse" ToRole="Aluno" />
+          <NavigationProperty Name="Interesse1" Relationship="APCModel.FK__Aluno_Int__Inter__48CFD27E" FromRole="Aluno_Interesse" ToRole="Interesse" />
+        </EntityType>
+        <EntityType Name="Aluno_Turma">
+          <Key>
+            <PropertyRef Name="Aluno_Turma1" />
+          </Key>
+          <Property Name="Aluno_Turma1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Aluno" Type="Int32" />
+          <Property Name="Turma" Type="Int32" />
+          <NavigationProperty Name="Aluno1" Relationship="APCModel.FK__Aluno_Tur__Aluno__49C3F6B7" FromRole="Aluno_Turma" ToRole="Aluno" />
+          <NavigationProperty Name="Turma1" Relationship="APCModel.FK__Aluno_Tur__Turma__4AB81AF0" FromRole="Aluno_Turma" ToRole="Turma" />
+        </EntityType>
+        <EntityType Name="Interesse">
+          <Key>
+            <PropertyRef Name="Interesse_ID" />
+          </Key>
+          <Property Name="Interesse_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Topico" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Disciplina" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Profundidade" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Aluno_Interesse" Relationship="APCModel.FK__Aluno_Int__Inter__48CFD27E" FromRole="Interesse" ToRole="Aluno_Interesse" />
+          <NavigationProperty Name="Professor_Interesse" Relationship="APCModel.FK__Professor__Inter__4D94879B" FromRole="Interesse" ToRole="Professor_Interesse" />
+          <NavigationProperty Name="Turma" Relationship="APCModel.FK_Turma_Interesse" FromRole="Interesse" ToRole="Turma" />
+        </EntityType>
+        <EntityType Name="Login_Usuario">
+          <Key>
+            <PropertyRef Name="LOID" />
+          </Key>
+          <Property Name="LOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LOLogin" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LOSenha" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LOTipoUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="APCModel.FK_Usuario_Login_Usuario" FromRole="Login_Usuario" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Professor">
+          <Key>
+            <PropertyRef Name="Professor_ID" />
+          </Key>
+          <Property Name="Professor_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Experiencia" Type="Int32" />
+          <Property Name="Avaliacao" Type="Int32" />
+          <Property Name="Potencial" Type="Int32" />
+          <Property Name="Usuario" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Professor_Interesse" Relationship="APCModel.FK__Professor__Profe__4CA06362" FromRole="Professor" ToRole="Professor_Interesse" />
+          <NavigationProperty Name="Professor_Turma" Relationship="APCModel.FK__Professor__Profe__4E88ABD4" FromRole="Professor" ToRole="Professor_Turma" />
+          <NavigationProperty Name="Usuario1" Relationship="APCModel.FK__Professor__Usuar__4BAC3F29" FromRole="Professor" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Professor_Interesse">
+          <Key>
+            <PropertyRef Name="Prof_Interesse_ID" />
+          </Key>
+          <Property Name="Prof_Interesse_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Professor" Type="Int32" />
+          <Property Name="Interesse" Type="Int32" />
+          <NavigationProperty Name="Interesse1" Relationship="APCModel.FK__Professor__Inter__4D94879B" FromRole="Professor_Interesse" ToRole="Interesse" />
+          <NavigationProperty Name="Professor1" Relationship="APCModel.FK__Professor__Profe__4CA06362" FromRole="Professor_Interesse" ToRole="Professor" />
+        </EntityType>
+        <EntityType Name="Professor_Turma">
+          <Key>
+            <PropertyRef Name="Professor_Turma_ID" />
+          </Key>
+          <Property Name="Professor_Turma_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Professor" Type="Int32" />
+          <Property Name="Turma" Type="Int32" />
+          <NavigationProperty Name="Professor1" Relationship="APCModel.FK__Professor__Profe__4E88ABD4" FromRole="Professor_Turma" ToRole="Professor" />
+          <NavigationProperty Name="Turma1" Relationship="APCModel.FK__Professor__Turma__4F7CD00D" FromRole="Professor_Turma" ToRole="Turma" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TipoUsuario">
+          <Key>
+            <PropertyRef Name="TUID" />
+          </Key>
+          <Property Name="TUID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoUsuario1" Type="Int32" Nullable="false" />
+          <Property Name="DescricaoTipo" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Turma">
+          <Key>
+            <PropertyRef Name="Turma_ID" />
+          </Key>
+          <Property Name="Turma_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Interesse" Type="Int32" />
+          <Property Name="Data" Type="DateTime" Precision="3" />
+          <Property Name="Duracao" Type="Time" Precision="7" />
+          <NavigationProperty Name="Aluno_Turma" Relationship="APCModel.FK__Aluno_Tur__Turma__4AB81AF0" FromRole="Turma" ToRole="Aluno_Turma" />
+          <NavigationProperty Name="Interesse1" Relationship="APCModel.FK_Turma_Interesse" FromRole="Turma" ToRole="Interesse" />
+          <NavigationProperty Name="Professor_Turma" Relationship="APCModel.FK__Professor__Turma__4F7CD00D" FromRole="Turma" ToRole="Professor_Turma" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Usuario_ID" />
+          </Key>
+          <Property Name="Usuario_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CPF" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Idade" Type="Int32" />
+          <Property Name="Login_Usuario" Type="Int32" />
+          <NavigationProperty Name="Aluno" Relationship="APCModel.FK__Aluno__Usuario__46E78A0C" FromRole="Usuario" ToRole="Aluno" />
+          <NavigationProperty Name="Login_Usuario1" Relationship="APCModel.FK_Usuario_Login_Usuario" FromRole="Usuario" ToRole="Login_Usuario" />
+          <NavigationProperty Name="Professor" Relationship="APCModel.FK__Professor__Usuar__4BAC3F29" FromRole="Usuario" ToRole="Professor" />
+        </EntityType>
+        <Association Name="FK__Aluno__Usuario__46E78A0C">
+          <End Type="APCModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="APCModel.Aluno" Role="Aluno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Usuario_ID" />
+            </Principal>
+            <Dependent Role="Aluno">
+              <PropertyRef Name="Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Aluno_Int__Aluno__47DBAE45">
+          <End Type="APCModel.Aluno" Role="Aluno" Multiplicity="0..1" />
+          <End Type="APCModel.Aluno_Interesse" Role="Aluno_Interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aluno">
+              <PropertyRef Name="Aluno_ID" />
+            </Principal>
+            <Dependent Role="Aluno_Interesse">
+              <PropertyRef Name="Aluno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Aluno_Tur__Aluno__49C3F6B7">
+          <End Type="APCModel.Aluno" Role="Aluno" Multiplicity="0..1" />
+          <End Type="APCModel.Aluno_Turma" Role="Aluno_Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aluno">
+              <PropertyRef Name="Aluno_ID" />
+            </Principal>
+            <Dependent Role="Aluno_Turma">
+              <PropertyRef Name="Aluno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Aluno_Int__Inter__48CFD27E">
+          <End Type="APCModel.Interesse" Role="Interesse" Multiplicity="0..1" />
+          <End Type="APCModel.Aluno_Interesse" Role="Aluno_Interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interesse">
+              <PropertyRef Name="Interesse_ID" />
+            </Principal>
+            <Dependent Role="Aluno_Interesse">
+              <PropertyRef Name="Interesse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Aluno_Tur__Turma__4AB81AF0">
+          <End Type="APCModel.Turma" Role="Turma" Multiplicity="0..1" />
+          <End Type="APCModel.Aluno_Turma" Role="Aluno_Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="Turma_ID" />
+            </Principal>
+            <Dependent Role="Aluno_Turma">
+              <PropertyRef Name="Turma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Inter__4D94879B">
+          <End Type="APCModel.Interesse" Role="Interesse" Multiplicity="0..1" />
+          <End Type="APCModel.Professor_Interesse" Role="Professor_Interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interesse">
+              <PropertyRef Name="Interesse_ID" />
+            </Principal>
+            <Dependent Role="Professor_Interesse">
+              <PropertyRef Name="Interesse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Turma_Interesse">
+          <End Type="APCModel.Interesse" Role="Interesse" Multiplicity="0..1" />
+          <End Type="APCModel.Turma" Role="Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interesse">
+              <PropertyRef Name="Interesse_ID" />
+            </Principal>
+            <Dependent Role="Turma">
+              <PropertyRef Name="Interesse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Login_Usuario">
+          <End Type="APCModel.Login_Usuario" Role="Login_Usuario" Multiplicity="0..1" />
+          <End Type="APCModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login_Usuario">
+              <PropertyRef Name="LOID" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Login_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Profe__4CA06362">
+          <End Type="APCModel.Professor" Role="Professor" Multiplicity="0..1" />
+          <End Type="APCModel.Professor_Interesse" Role="Professor_Interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Professor">
+              <PropertyRef Name="Professor_ID" />
+            </Principal>
+            <Dependent Role="Professor_Interesse">
+              <PropertyRef Name="Professor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Profe__4E88ABD4">
+          <End Type="APCModel.Professor" Role="Professor" Multiplicity="0..1" />
+          <End Type="APCModel.Professor_Turma" Role="Professor_Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Professor">
+              <PropertyRef Name="Professor_ID" />
+            </Principal>
+            <Dependent Role="Professor_Turma">
+              <PropertyRef Name="Professor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Usuar__4BAC3F29">
+          <End Type="APCModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="APCModel.Professor" Role="Professor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Usuario_ID" />
+            </Principal>
+            <Dependent Role="Professor">
+              <PropertyRef Name="Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Professor__Turma__4F7CD00D">
+          <End Type="APCModel.Turma" Role="Turma" Multiplicity="0..1" />
+          <End Type="APCModel.Professor_Turma" Role="Professor_Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="Turma_ID" />
+            </Principal>
+            <Dependent Role="Professor_Turma">
+              <PropertyRef Name="Turma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="APCModelStoreContainer" CdmEntityContainer="APCEntities">
+          <EntitySetMapping Name="C__RefactorLog">
+            <EntityTypeMapping TypeName="APCModel.C__RefactorLog">
+              <MappingFragment StoreEntitySet="__RefactorLog">
+                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Aluno">
+            <EntityTypeMapping TypeName="APCModel.Aluno">
+              <MappingFragment StoreEntitySet="Aluno">
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Potencial" ColumnName="Potencial" />
+                <ScalarProperty Name="Avaliacao" ColumnName="Avaliacao" />
+                <ScalarProperty Name="Aluno_ID" ColumnName="Aluno_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Aluno_Interesse">
+            <EntityTypeMapping TypeName="APCModel.Aluno_Interesse">
+              <MappingFragment StoreEntitySet="Aluno_Interesse">
+                <ScalarProperty Name="Interesse" ColumnName="Interesse" />
+                <ScalarProperty Name="Aluno" ColumnName="Aluno" />
+                <ScalarProperty Name="Aluno_Interesse_ID" ColumnName="Aluno_Interesse_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Aluno_Turma">
+            <EntityTypeMapping TypeName="APCModel.Aluno_Turma">
+              <MappingFragment StoreEntitySet="Aluno_Turma">
+                <ScalarProperty Name="Turma" ColumnName="Turma" />
+                <ScalarProperty Name="Aluno" ColumnName="Aluno" />
+                <ScalarProperty Name="Aluno_Turma1" ColumnName="Aluno_Turma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Interesse">
+            <EntityTypeMapping TypeName="APCModel.Interesse">
+              <MappingFragment StoreEntitySet="Interesse">
+                <ScalarProperty Name="Profundidade" ColumnName="Profundidade" />
+                <ScalarProperty Name="Disciplina" ColumnName="Disciplina" />
+                <ScalarProperty Name="Topico" ColumnName="Topico" />
+                <ScalarProperty Name="Interesse_ID" ColumnName="Interesse_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login_Usuario">
+            <EntityTypeMapping TypeName="APCModel.Login_Usuario">
+              <MappingFragment StoreEntitySet="Login_Usuario">
+                <ScalarProperty Name="LOTipoUsuario" ColumnName="LOTipoUsuario" />
+                <ScalarProperty Name="LOSenha" ColumnName="LOSenha" />
+                <ScalarProperty Name="LOLogin" ColumnName="LOLogin" />
+                <ScalarProperty Name="LOID" ColumnName="LOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Professor">
+            <EntityTypeMapping TypeName="APCModel.Professor">
+              <MappingFragment StoreEntitySet="Professor">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Potencial" ColumnName="Potencial" />
+                <ScalarProperty Name="Avaliacao" ColumnName="Avaliacao" />
+                <ScalarProperty Name="Experiencia" ColumnName="Experiencia" />
+                <ScalarProperty Name="Professor_ID" ColumnName="Professor_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Professor_Interesse">
+            <EntityTypeMapping TypeName="APCModel.Professor_Interesse">
+              <MappingFragment StoreEntitySet="Professor_Interesse">
+                <ScalarProperty Name="Interesse" ColumnName="Interesse" />
+                <ScalarProperty Name="Professor" ColumnName="Professor" />
+                <ScalarProperty Name="Prof_Interesse_ID" ColumnName="Prof_Interesse_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Professor_Turma">
+            <EntityTypeMapping TypeName="APCModel.Professor_Turma">
+              <MappingFragment StoreEntitySet="Professor_Turma">
+                <ScalarProperty Name="Turma" ColumnName="Turma" />
+                <ScalarProperty Name="Professor" ColumnName="Professor" />
+                <ScalarProperty Name="Professor_Turma_ID" ColumnName="Professor_Turma_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="APCModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoUsuario">
+            <EntityTypeMapping TypeName="APCModel.TipoUsuario">
+              <MappingFragment StoreEntitySet="TipoUsuario">
+                <ScalarProperty Name="DescricaoTipo" ColumnName="DescricaoTipo" />
+                <ScalarProperty Name="TipoUsuario1" ColumnName="TipoUsuario" />
+                <ScalarProperty Name="TUID" ColumnName="TUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turma">
+            <EntityTypeMapping TypeName="APCModel.Turma">
+              <MappingFragment StoreEntitySet="Turma">
+                <ScalarProperty Name="Duracao" ColumnName="Duracao" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Interesse" ColumnName="Interesse" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Turma_ID" ColumnName="Turma_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="APCModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Login_Usuario" ColumnName="Login_Usuario" />
+                <ScalarProperty Name="Idade" ColumnName="Idade" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
